@@ -88,7 +88,7 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Tehran'
 
-USE_I18N = True
+USE_I18N = False
 
 USE_TZ = True
 
@@ -129,7 +129,7 @@ logging.config.dictConfig({
             'level': 'INFO',
             'class': 'logging.FileHandler',
             'formatter': 'file',
-            'filename': 'logs/alpha.log',
+            'filename': BASE_DIR / 'logs/alpha.log',
         },
         'django.server': DEFAULT_LOGGING['handlers']['django.server'],
     },
