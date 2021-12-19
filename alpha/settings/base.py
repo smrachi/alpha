@@ -95,10 +95,12 @@ USE_TZ = True
 
 STATIC_URL = 'staticfiles/'
 STATIC_ROOT = BASE_DIR / 'staticfiles/'
-STATICFILES_DIR = []
+STATICFILES_DIR = [
+    BASE_DIR / 'static',
+]
 
-MEDIA_URL = 'mediafiles/'
-MEDIA_ROOT = BASE_DIR / 'mediafiles/'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -141,7 +143,7 @@ logging.config.dictConfig({
         },
         'apps': {
             'level': LOG_LEVEL,
-            'handlers': ['console', ],
+            'handlers': ['console', 'file'],
             'propagate': False,
         },
         'django.server': DEFAULT_LOGGING['loggers']['django.server'],
