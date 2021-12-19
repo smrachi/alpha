@@ -66,6 +66,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'alpha.wsgi.application'
 
+AUTH_USER_MODEL = 'users.CustomUser'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
